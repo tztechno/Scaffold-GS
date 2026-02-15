@@ -56,7 +56,10 @@ except ImportError:
     print("not found tf board")
 
 def saveRuntimeCode(dst: str) -> None:
-    additionalIgnorePatterns = ['.git', '.gitignore']
+    
+    # additionalIgnorePatterns = ['.git', '.gitignore'] 
+    additionalIgnorePatterns = ['output', '.git', '.gitignore'] #fixed 2026/02/15
+    
     ignorePatterns = set()
     ROOT = '.'
     with open(os.path.join(ROOT, '.gitignore')) as gitIgnoreFile:
